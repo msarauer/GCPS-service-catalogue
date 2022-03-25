@@ -1,0 +1,35 @@
+
+$font-family-base: "Noto Sans", sans-serif; // (Bootstrap override), "Noto Sans" is a Google font but it is not loaded yet
+
+// Typography
+$font-size-base: 20px; // this changes the font-size throughout bootstrap
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 1.25rem;
+$line-height-base: 1.6;
+
+$h1-font-size: $font-size-base * 1.9;
+$h2-font-size: $font-size-base * 1.8;
+$h3-font-size: $font-size-base * 1.2;
+$h4-font-size: $font-size-base * 1.1;
+$h5-font-size: $font-size-base * 1;
+$h6-font-size: $font-size-base * 0.95;
+
+$lead-font-size: $font-size-base * 1;
+$lead-font-weight: 300;
+
+$primary: #284162; // changed
+$gray-light: #6f6f6f; // Light grey colour (Bootstrap override).
+$border-red: #af3c43;
+$light: #F8F8F8;
+$secondary: #595959;
+$dark: #343a40;
+
+//Breadcrumb
+$breadcrumb-bg: transparent; // Inner background colour (Bootstrap override).
+$breadcrumb-divider: quote(">");
+
+//** Breadcrumb text color
+$breadcrumb-color: #26374A;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color: #26374A;
+//** Textual separator for between breadcrumb elements
