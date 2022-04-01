@@ -7,9 +7,8 @@ import woman2 from "../images/Picture3.png";
 const personaArray = [man, woman1, woman2];
 
 const PersonaGroup = ({ items }) => {
-  console.log(items);
   return (
-    <div className="d-lg-flex align-items-end d-none ">
+    <div className="persona-group align-items-end">
       <div className="col-3"></div>
       {items.map((item, index) => {
         return <Persona persona={personaArray[index]} text={item.quote} />;

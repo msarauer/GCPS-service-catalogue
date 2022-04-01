@@ -19,7 +19,7 @@ export const wrapPageElement = ({ element, props }) => {
 
   return (
     <IntlProvider locale={languageKey}>
-      <Layout>{element}</Layout>
+      <Layout location={props.location.pathname}>{element}</Layout>
     </IntlProvider>
   );
 };

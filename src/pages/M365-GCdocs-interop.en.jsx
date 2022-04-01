@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import Page from "../components/Page";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import StickyMenu from "../components/StickyMenu";
 
 const M365GCdocsInterop = () => {
   const pageData = useStaticQuery(graphql`
@@ -60,9 +61,22 @@ const M365GCdocsInterop = () => {
     }
   `).prismicPage.data;
 
+  const sections = pageData.body.filter(
+    (slice) => slice.slice_type === "paragraph_section"
+  );
+
+  const refsList = useRef([]);
+
   return (
     <main id="main-content">
-      <Page pageData={pageData} />
+      <div className="row">
+        <div className="col-md-9 col-12 order-2 order-md-1">
+          <Page pageData={pageData} refsList={refsList} />
+        </div>
+        <div className="col-md-3 col-12 order-1 order-md-2">
+          <StickyMenu sections={sections} refsList={refsList} />
+        </div>
+      </div>
     </main>
   );
 };

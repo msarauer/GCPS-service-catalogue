@@ -2,13 +2,13 @@ import React from "react";
 import Breadcrumbs from "./Breadcrumbs";
 import GOClogoEn from "../images/sig-blk-en.svg";
 import GOClogoFr from "../images/sig-blk-fr.svg";
-// import { useIntl } from 'react-intl';
-// import LanguageSelect from "./LanguageSelect";
+import { useIntl } from "react-intl";
+import LanguageSelect from "./LanguageSelect";
 
-const Header = () => {
-  // const intl = useIntl();
-  // let locale = `${intl.locale}-ca`;
-  let homeLink = `/en/`;
+const Header = ({ layoutData, location }) => {
+  const intl = useIntl();
+  let locale = `${intl.locale}-ca`;
+  let homeLink = `/${intl.locale}/`;
 
   return (
     <header className="mb-0">
@@ -20,7 +20,7 @@ const Header = () => {
               aria-label="main skiplink"
               href="#main-content"
             >
-              Skip to the main content
+              {layoutData.skip_link_text}
             </a>
           </nav>
           <div
@@ -41,23 +41,24 @@ const Header = () => {
                     ? "Public Services and Procurement Canada Logo FR"
                     : "Public Services and Procurement Canada Logo"
                 }
+                //TODO: Get alt text from CMS
               />
             </div>
           </div>
           <section className="text-right align-self-center ml-auto">
             <h2 className="sr-only sr-only-focusable aurora-skip">
-              Language Selection
+              {layoutData.header_langauge_select}
             </h2>
-            {/* <LanguageSelect /> */}
+            <LanguageSelect layoutData={layoutData} />
           </section>
         </div>
       </div>
-      <Breadcrumbs />
+      <Breadcrumbs layoutData={layoutData} location={location} />
       <div className="py-4 header-background mb-3">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
-              <h1 className="text-light">Title Goes Here</h1>
+              <h1 className="text-light">{layoutData.page_title}</h1>
             </div>
           </div>
         </div>

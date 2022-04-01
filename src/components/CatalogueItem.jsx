@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "gatsby";
 
-const CatalogueItem = ({ icon, title, content }) => {
+const CatalogueItem = ({ icon, title, content, linkTo }) => {
   return (
-    <div className="catalogue-item">
-      <div className="catalogue-item-icon">{icon}</div>
-      <div className="catalogue-item-content">
-        <h3>{title}</h3>
-        <p>{content}</p>
-      </div>
-    </div>
+    <Link to={linkTo} className="catalogue-item ">
+      <span className="catalogue-item-icon">{icon}</span>
+      <span className="catalogue-item-content d-flex flex-column text-decoration-none">
+        <span className="catalogue-title">{title}</span>
+        {/* <span>{content}</span> */}
+      </span>
+    </Link>
   );
 };
 

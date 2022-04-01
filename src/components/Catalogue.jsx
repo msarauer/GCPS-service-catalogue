@@ -5,61 +5,30 @@ import { BsFillBriefcaseFill } from "react-icons/bs";
 
 const Catalogue = () => {
   return (
-    <div className="catalogue">
+    <div className="catalogue mb-5">
       <CatalogueItem
         icon={<AiFillInteraction />}
-        title="M365 -GCdocs interoperability"
+        title="M365 - GCdocs interoperability"
         content="This is the content"
+        linkTo="/en/m365-gcdocs-interop"
       />
       <CatalogueItem
         icon={<BsFillBriefcaseFill />}
         title="Case/workflow management system"
         content="This is the content"
+        linkTo="/en/case-workflow-mgmt-system"
       />
       <CatalogueItem
         icon={<AiFillApi />}
         title="APIs for common enterprise solutions"
         content="This is the content"
+        linkTo="/en/apis-common-enterprise-solutions"
       />
       <CatalogueItem
         icon={<AiFillFileText />}
         title="GC Electronic Document and Records Managment System"
         content="This is the content"
-      />
-      <CatalogueItem
-        icon={""}
-        title="This is the title"
-        content="This is the content"
-      />
-      <CatalogueItem
-        icon={""}
-        title="This is the title"
-        content="This is the content"
-      />
-      <CatalogueItem
-        icon={""}
-        title="This is the title"
-        content="This is the content"
-      />
-      <CatalogueItem
-        icon={""}
-        title="This is the title"
-        content="This is the content"
-      />
-      <CatalogueItem
-        icon={""}
-        title="This is the title"
-        content="This is the content"
-      />
-      <CatalogueItem
-        icon={""}
-        title="This is the title"
-        content="This is the content"
-      />
-      <CatalogueItem
-        icon={""}
-        title="This is the title"
-        content="This is the content"
+        linkTo="/en/gc-electronic-document-and-records-managment-system"
       />
     </div>
   );

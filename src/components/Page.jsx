@@ -14,16 +14,7 @@ import PersonaGroup from "./PersonaGroup";
 // import SideTabs from "./SideTabs";
 // import Instructions from "./Instructions";
 
-const Page = ({
-  pageData,
-  location,
-  activeUseCase,
-  setFormType,
-  setShowForm,
-  setEmailStatus,
-  expanded,
-  refsList,
-}) => {
+const Page = ({ pageData, refsList }) => {
   const slices = pageData.body;
 
   console.log(pageData.title);
@@ -43,6 +34,8 @@ const Page = ({
               <ParagraphSection
                 title={slice.primary.title1.richText}
                 content={slice.primary.content.richText}
+                refsList={refsList}
+                index={innerIndex}
               />
             </div>
           );

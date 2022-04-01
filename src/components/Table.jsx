@@ -10,7 +10,6 @@ const Table = ({ items, caption }) => {
     const array = [];
     for (let x = 0; x < remainingRows.length; x++) {
       const row_items = remainingRows[x].table_row_link.document.data.row;
-      console.log(row_items);
       array.push(
         <tr>
           {row_items.map((item, i) => {
