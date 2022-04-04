@@ -7,8 +7,14 @@ import LanguageSelect from "./LanguageSelect";
 
 const Header = ({ layoutData, location }) => {
   const intl = useIntl();
-  let locale = `${intl.locale}-ca`;
   let homeLink = `/${intl.locale}/`;
+
+  const locationObj = {
+    "/en/": "GCPS Service Catalogue",
+    "/fr/": "FR GCPS Service Catalogue",
+    "/en/m365gcdocs-interop/": "M365-GCdocs Interoperability",
+    "/fr/m365gcdocs-interop/": "FR M365-GCdocs Interoperability",
+  };
 
   return (
     <header className="mb-0">
@@ -53,12 +59,16 @@ const Header = ({ layoutData, location }) => {
           </section>
         </div>
       </div>
-      <Breadcrumbs layoutData={layoutData} location={location} />
+      <Breadcrumbs
+        layoutData={layoutData}
+        location={location}
+        locationObj={locationObj}
+      />
       <div className="py-4 header-background mb-3">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
-              <h1 className="text-light">{layoutData.page_title}</h1>
+              <h1 className="text-light">{locationObj[location]}</h1>
             </div>
           </div>
         </div>

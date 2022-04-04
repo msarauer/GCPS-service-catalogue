@@ -5,6 +5,7 @@ import Header from "./Header";
 
 export const Layout = ({ children, location }) => {
   // const current = location.pathname.substring(3);
+  console.log(location);
 
   const layoutData = useStaticQuery(graphql`
     query LayoutQuery {
