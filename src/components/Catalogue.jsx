@@ -13,7 +13,7 @@ const Catalogue = () => {
         icon={<AiFillInteraction />}
         title="M365 - GCdocs interoperability"
         content="This is the content"
-        linkTo={`/${intl.locale}/m365-gcdocs-interop/`}
+        linkTo={`/${intl.locale}/m365gcdocs-interop/`}
       />
       <CatalogueItem
         icon={<BsFillBriefcaseFill />}
