@@ -2,11 +2,8 @@ import React, { useRef } from "react";
 import Page from "../components/Page";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import StickyMenu from "../components/StickyMenu";
-import { useIntl } from "react-intl";
 
 const M365GCdocsInterop = () => {
-  const intl = useIntl();
-  console.log(intl);
   const pageData = useStaticQuery(graphql`
     query M365GCdocsInteropPageFrenchQuery {
       prismicPage(uid: { eq: "m365-gcdocs-interop" }, lang: { eq: "fr-ca" }) {
