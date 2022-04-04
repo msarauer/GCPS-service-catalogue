@@ -2,15 +2,18 @@ import React from "react";
 import CatalogueItem from "../components/CatalogueItem";
 import { AiFillInteraction, AiFillApi, AiFillFileText } from "react-icons/ai";
 import { BsFillBriefcaseFill } from "react-icons/bs";
+import { useIntl } from "react-intl";
 
 const Catalogue = () => {
+  const intl = useIntl();
+
   return (
     <div className="catalogue mb-5">
       <CatalogueItem
         icon={<AiFillInteraction />}
         title="M365 - GCdocs interoperability"
         content="This is the content"
-        linkTo="/en/M365-GCdocs-interop/"
+        linkTo={`/${intl.locale}/m365-gcdocs-interop/`}
       />
       <CatalogueItem
         icon={<BsFillBriefcaseFill />}
