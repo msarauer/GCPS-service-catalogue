@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Page from "../components/Page";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import StickyMenu from "../components/StickyMenu";
 
 const M365GCdocsInterop = () => {
