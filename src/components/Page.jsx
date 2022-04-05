@@ -17,8 +17,6 @@ import PersonaGroup from "./PersonaGroup";
 const Page = ({ pageData, refsList }) => {
   const slices = pageData.body;
 
-  console.log(pageData.title);
-
   return (
     <div>
       {/* {pageData.title.richText[0].text && (
@@ -41,7 +39,6 @@ const Page = ({ pageData, refsList }) => {
           );
         }
         if (slice.slice_type === "persona_text") {
-          console.log(slice);
           return <PersonaGroup items={slice.items} />;
         }
         if (slice.slice_type === "table") {

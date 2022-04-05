@@ -5,7 +5,6 @@ exports.linkResolver = (doc) => {
     }
 
     case "page": {
-      console.log(doc);
       return `/${doc.lang.substring(0, 2)}/${doc.uid}`;
     }
 

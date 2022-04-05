@@ -2,7 +2,6 @@ import { RichText } from "prismic-reactjs";
 import React from "react";
 
 const ParagraphSection = ({ title, content, refsList, index }) => {
-  console.log(title);
   return (
     <>
       {title.length > 0 ? (

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 // import "../scss/sticky-menu.scss";
 
 const StickyMenu = ({ sections, refsList }) => {
-  console.log(sections);
   return (
     <nav className="sticky-menu">
       <h3 className="h5">Browse by Section</h3>

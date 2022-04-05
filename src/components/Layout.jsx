@@ -4,13 +4,11 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 export const Layout = ({ children, location }) => {
-  // const current = location.pathname.substring(3);
-  console.log(location);
-
   const layoutData = useStaticQuery(graphql`
     query LayoutQuery {
       allPrismicLayout {
         nodes {
+          lang
           data {
             breadcrumb_link {
               url
@@ -28,15 +26,19 @@ export const Layout = ({ children, location }) => {
         }
       }
     }
-  `).allPrismicLayout.nodes[0].data;
+  `).allPrismicLayout;
+
+  const data = layoutData.nodes.find(
+    (node) => node.lang.substring(0, 2) === location.substring(1, 3)
+  ).data;
 
   return (
     <div>
-      <Header layoutData={layoutData} location={location} />
+      <Header layoutData={data} location={location} />
       <div>
         <div className="container-xl mt-4 ">{children}</div>
       </div>
-      <Footer layoutData={layoutData} />
+      <Footer layoutData={data} />
     </div>
   );
 };
