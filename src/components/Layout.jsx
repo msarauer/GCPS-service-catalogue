@@ -1,9 +1,13 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { useIntl } from "react-intl";
+
 import Footer from "./Footer";
 import Header from "./Header";
 
 export const Layout = ({ children, location }) => {
+  const intl = useIntl();
+  let locale = `${intl.locale}-ca`;
   const layoutData = useStaticQuery(graphql`
     query LayoutQuery {
       allPrismicLayout {
@@ -28,9 +32,7 @@ export const Layout = ({ children, location }) => {
     }
   `).allPrismicLayout;
 
-  const data = layoutData.nodes.find(
-    (node) => node.lang.substring(0, 2) === location.substring(1, 3)
-  ).data;
+  const data = layoutData.nodes.find((node) => node.lang === locale).data;
 
   return (
     <div>

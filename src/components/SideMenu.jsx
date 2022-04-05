@@ -6,7 +6,7 @@ const SideMenu = ({ listItems }) => {
       <h3 className="side-menu-title">A to Z</h3>
       <ul>
         {listItems.map((item) => (
-          <li>{item}</li>
+          <li>{item.item}</li>
         ))}
       </ul>
     </nav>
