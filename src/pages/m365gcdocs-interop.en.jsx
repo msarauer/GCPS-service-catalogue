@@ -41,6 +41,22 @@ const M365GCdocsInterop = () => {
                 quote
               }
             }
+            ... on PrismicPageDataBodyButtonBar {
+              id
+              primary {
+                video_title
+                video_aria_label
+                button_link
+                button_text
+                section_title {
+                  richText
+                }
+                section_text {
+                  richText
+                }
+              }
+              slice_type
+            }
             ... on PrismicPageDataBodyParagraphSection {
               id
               primary {

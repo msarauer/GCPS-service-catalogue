@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { useIntl } from "react-intl";
 
+import BetaBanner from "./BetaBanner";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -36,6 +37,7 @@ export const Layout = ({ children, location }) => {
 
   return (
     <div>
+      <BetaBanner lang={intl.locale} />
       <Header layoutData={data} location={location} />
       <div>
         <div className="container-xl mt-4 ">{children}</div>
