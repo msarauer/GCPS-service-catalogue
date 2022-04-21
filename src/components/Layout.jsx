@@ -39,7 +39,7 @@ export const Layout = ({ children, location }) => {
     <div>
       <BetaBanner lang={intl.locale} />
       <Header layoutData={data} location={location} />
-      <div>
+      <div className="contain">
         <div className="container-xl mt-4 ">{children}</div>
       </div>
       <Footer layoutData={data} />
