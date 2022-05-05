@@ -14,12 +14,16 @@ const ParagraphSection = ({ title, content, refsList, index }) => {
             })
           }
         >
-          <RichText render={title} />
+          <div className="mb-4">
+            <RichText render={title} />
+          </div>
           <RichText render={content} />
         </div>
       ) : (
         <div>
-          <RichText render={title} />
+          <div className="mb-4">
+            <RichText render={title} />
+          </div>
           <RichText render={content} />
         </div>
       )}

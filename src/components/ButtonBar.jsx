@@ -9,7 +9,9 @@ const ButtonBar = ({ slice }) => {
   return (
     <div className="button-bar d-flex flex-column justify-content-around align-items-center py-5">
       <div>
-        <PrismicRichText field={slice.primary.section_title.richText} />
+        <div className="mb-4">
+          <PrismicRichText field={slice.primary.section_title.richText} />
+        </div>
         <PrismicRichText field={slice.primary.section_text.richText} />
         <div className="row">
           <div className={`${slice.primary.video_title ? "col-lg-4" : "col"}`}>
