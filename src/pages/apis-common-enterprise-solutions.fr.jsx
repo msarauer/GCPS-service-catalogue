@@ -63,7 +63,7 @@ const ApisCommonEnterpriseSolutions = () => {
   return (
     <main id="main-content">
       {" "}
-      No content here yet. / Pas encore de contenu ici.
+      No content here yet. / Pas encore de contenu ici.{" "}
     </main>
   );
 };
