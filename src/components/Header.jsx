@@ -9,11 +9,14 @@ const Header = ({ layoutData, location }) => {
   const intl = useIntl();
   let homeLink = `/${intl.locale}/`;
 
+  //TODO Prismic
   const locationObj = {
-    "/en/": "GCPS Service Catalogue",
-    "/fr/": "FR GCPS Service Catalogue",
-    "/en/m365gcdocs-interop/": "M365-GCdocs Interoperability",
-    "/fr/m365gcdocs-interop/": "FR M365-GCdocs Interoperability",
+    "/en/":
+      "Government of Canada Programs and solutions (GCPS) service catalogue",
+    "/fr/":
+      "Gouvernement de Canada programmes et solutions (GCPS) catalogue de services",
+    "/en/m365gcdocs-interop/": "M365-GCdocs interoperability",
+    "/fr/m365gcdocs-interop/": "M365-GCdocs interopérabilité",
   };
 
   return (
@@ -44,8 +47,8 @@ const Header = ({ layoutData, location }) => {
                 className="goc-logo"
                 alt={
                   homeLink === "/fr/"
-                    ? "Public Services and Procurement Canada Logo FR"
-                    : "Public Services and Procurement Canada Logo"
+                    ? "Services publics et Approvisionnement Canada"
+                    : "Public Services and Procurement Canada"
                 }
                 //TODO: Get alt text from CMS
               />
@@ -53,7 +56,7 @@ const Header = ({ layoutData, location }) => {
           </div>
           <section className="text-right align-self-center ml-auto">
             <h2 className="sr-only sr-only-focusable aurora-skip">
-              {layoutData.header_langauge_select}
+              {layoutData.header_language_select}
             </h2>
             <LanguageSelect layoutData={layoutData} />
           </section>
