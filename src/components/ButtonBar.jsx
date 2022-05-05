@@ -1,6 +1,6 @@
 import React from "react";
 import { PrismicRichText } from "@prismicio/react";
-import gcdocsintegration from "../assets/M365 GCdocs Integration Solutions Video.mp4";
+import gcdocsintegration from "../assets/M365GCdocsIntegrationSolutionsVideo.mp4";
 
 const ButtonBar = ({ slice }) => {
   const videos = {
