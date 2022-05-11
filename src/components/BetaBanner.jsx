@@ -8,7 +8,7 @@ const BetaBanner = ({ lang }) => {
           <span style={{ fontSize: "15px" }}>
             This is the{" "}
             <strong className="underline">
-              <u>Beta</u>
+              <u>Alpha</u>
             </strong>{" "}
             version of the website.
           </span>
@@ -16,7 +16,7 @@ const BetaBanner = ({ lang }) => {
           <span style={{ fontSize: "15px" }}>
             Il s'agit de la version{" "}
             <strong className="underline">
-              <u>Bêta</u>
+              <u>Alpha</u>
             </strong>{" "}
             du site web.
           </span>
