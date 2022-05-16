@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/SEO";
 import Page from "../components/Page";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -62,7 +63,7 @@ const CaseWorkflowMgmtSystem = () => {
 
   return (
     <main id="main-content">
-      {" "}
+      <SEO title="Un système de gestion des cas/flux de travail" lang="fr" />
       No content here yet. / Pas encore de contenu ici.
     </main>
   );
