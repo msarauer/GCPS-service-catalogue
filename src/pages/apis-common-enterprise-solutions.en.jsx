@@ -1,5 +1,6 @@
 import React from "react";
 import Page from "../components/Page";
+import SEO from "../components/SEO";
 import { useStaticQuery, graphql } from "gatsby";
 
 const ApisCommonEnterpriseSolutions = () => {
@@ -62,7 +63,7 @@ const ApisCommonEnterpriseSolutions = () => {
 
   return (
     <main id="main-content">
-      {" "}
+      <SEO title="APIs Common Enterprise Solutions" lang="en" />
       No content here yet. / Pas encore de contenu ici.
     </main>
   );

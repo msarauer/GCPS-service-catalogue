@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Page from "../components/Page";
 import { useStaticQuery, graphql } from "gatsby";
 import StickyMenu from "../components/StickyMenu";
+import SEO from "../components/SEO";
 
 const M365GCdocsInterop = () => {
   const pageData = useStaticQuery(graphql`
@@ -85,6 +86,7 @@ const M365GCdocsInterop = () => {
 
   return (
     <main id="main-content">
+      <SEO title="M365-GCdocs interoperability" lang="en" />
       <div className="row">
         <div className="col-md-9 col-12 order-2 order-md-1">
           <Page pageData={pageData} refsList={refsList} />
