@@ -86,7 +86,7 @@ const M365GCdocsInterop = () => {
 
   return (
     <main id="main-content">
-      <SEO title="M365-GCdocs interoperability" lang="en" />
+      <SEO title="Microsoft 365 (M365)-GCdocs interoperability" lang="en" />
       <div className="row">
         <div className="col-md-9 col-12 order-2 order-md-1">
           <Page pageData={pageData} refsList={refsList} />
