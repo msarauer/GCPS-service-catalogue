@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import Catalogue from "../components/Catalogue";
 import SideMenu from "../components/SideMenu";
+import SEO from "../components/SEO";
 
 const IndexPage = () => {
   const homeData = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ const IndexPage = () => {
 
   return (
     <main id="main-content" aria-labelledby="h2-label">
+      <SEO title="" lang="en" />
       <div className="bg-light px-5 py-4 mb-5">
         <h2>{homeData.catalogue_title}</h2>
         <div className="catalogue-page">

@@ -12,11 +12,11 @@ const Header = ({ layoutData, location }) => {
   //TODO Prismic
   const locationObj = {
     "/en/":
-      "Government of Canada Programs and solutions (GCPS) service catalogue",
+      "Government of Canada Programs and Services (GCPS) service catalogue",
     "/fr/":
-      "Gouvernement de Canada programmes et solutions (GCPS) catalogue de services",
-    "/en/m365gcdocs-interop/": "M365-GCdocs interoperability",
-    "/fr/m365gcdocs-interop/": "M365-GCdocs interopérabilité",
+      "Gouvernement de Canada programmes et services (GCPS) catalogue de services",
+    "/en/m365gcdocs-interop/": "Microsoft M365 (M365)-GCdocs interoperability",
+    "/fr/m365gcdocs-interop/": "Microsoft M365 (M365)-GCdocs interopérabilité",
   };
 
   return (

@@ -1,10 +1,43 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 const SEO = ({ title, description, lang, meta = [] }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            titleEnglish
+            titleFrench
+            descriptionEnglish
+            descriptionFrench
+            authorEnglish
+            authorFrench
+            dateIssued
+            dateModified
+            subjectEnglish
+            subjectFrench
+            keywordsEnglish
+            keywordsFrench
+          }
+        }
+      }
+    `
+  );
+  const metaTitle =
+    lang === "en"
+      ? `${title} - GCPS service catalogue - GCintranet - PSPC`
+      : `${title} - GCPS catalogue de service - GCintranet - SPAC`;
+
+  const metaDescription =
+    description || lang === "en"
+      ? site.siteMetadata.descriptionEnglish
+      : site.siteMetadata.descriptionFrench;
+
   return (
     <Helmet
-      title={title}
+      title={metaTitle}
       htmlAttributes={{ lang: lang }}
       meta={[
         {
